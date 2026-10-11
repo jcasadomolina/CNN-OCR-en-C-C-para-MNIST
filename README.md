@@ -139,18 +139,6 @@ mnist_txt_1000/
 └── 9/
 ```
 
-Cada archivo `.txt` debe contener **784 valores `float`**, separados por comas, correspondientes a una imagen de `28 x 28`. Las carpetas representan la etiqueta correcta.
-
-## Estado actual y próximos pasos
-
-El código fuente, el dataset de evaluación y los pesos entrenados están incluidos. La ejecución validada sobre las 1000 imágenes disponibles alcanza actualmente **100% de exactitud** en este banco. El PDF del proyecto documenta una ejecución previa de **98,8%**; ambas cifras dependen del conjunto de datos y del proceso de entrenamiento utilizado. Tampoco se incluye todavía un proyecto de Vitis HLS ni un sistema de build multiplataforma.
-
-Una evolución natural del proyecto sería:
-
-1. Incorporar los pesos completos y documentar su procedencia y entrenamiento.
-2. Añadir CMake o un workflow de GitHub Actions para automatizar la compilación.
-3. Añadir validación más estricta del formato y tamaño de las imágenes de entrada.
-4. Añadir pruebas unitarias para cada etapa de la CNN y métricas reproducibles de exactitud, latencia y recursos HLS.
 
 ## Tecnologías y referencias
 
@@ -159,7 +147,3 @@ Una evolución natural del proyecto sería:
 - [MNIST Database](http://yann.lecun.com/exdb/mnist/)
 - [Informe técnico del proyecto](Reconocimiento%20de%20dígitos%20con%20redes%20neuronales%20en%20Vitis%20HLS.pdf)
 - [Open Neural Network Exchange (ONNX)](https://onnx.ai/) como referencia para futuros flujos de exportación de modelos
-
-## Licencia
-
-No se ha definido una licencia para este repositorio. Antes de publicarlo, añade un archivo `LICENSE` con la licencia que corresponda al proyecto y a los pesos del modelo.
